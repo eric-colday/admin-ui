@@ -13,7 +13,7 @@ const ThemeToggle = () => {
       className={styles.container} 
       onClick={toggle}
       style={
-        theme === "dark" ? { backgroundColor: "white" } : { backgroundColor: "#0f172a" }
+        theme === "dark" ? { backgroundColor: "white" } : { backgroundColor: "white" }
       }
     >
       <Image src="/topbar/moon.png" alt="" width={14} height={14} />
@@ -22,7 +22,7 @@ const ThemeToggle = () => {
         style={
           theme === "dark"
             ? { left: 1, background: "#0f172a" }
-            : { right: 1, background: "white" }
+            : { right: 1, background: "#0f172a" }
         }
       ></div>
       <Image src="/topbar/sun.png" alt="" width={14} height={14} />
