@@ -62,11 +62,11 @@ const Sidebar = () => {
                       className="w-16 h-16 object-cover rounded-full"
                     />
                     <div className="flex flex-col gap-1">
-                      <span className="text-sm">Eric Colday</span>
+                      <span className="text-sm text-white">Eric Colday</span>
                       <span className="text-white text-sm">Admin</span>
                     </div>
                   </div>
-                  <ul className="flex flex-col p-3 gap-6">
+                  <ul className="flex flex-col p-3 gap-6 text-white">
                     <Link href="/" className="flex items-center">
                       <HomeIcon className="text-xl mr-2" />
                       <li className="cursor-pointer flex items-center">
@@ -86,13 +86,13 @@ const Sidebar = () => {
                       </li>
                     </Link>
                     <Link href="/articles" className="flex items-center">
-                      <ArticleIcon className="text-xl mr-2" />
-                      <li className=" cursor-pointer flex items-center ">
+                      <ArticleIcon className="text-xl mr-2 " />
+                      <li className=" cursor-pointer flex items-center  ">
                         Articles
                       </li>
                     </Link>
                     <Link href="/connexion">
-                      <LogoutIcon className="text-3xl text-white cursor-pointer mb-2" />
+                      <LogoutIcon className="text-3xl cursor-pointer mb-2" />
                     </Link>
                     <ThemeToggle />
                   </ul>
