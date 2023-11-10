@@ -16,7 +16,7 @@ const Topbar = () => {
       <div className="h-full px-8 flex items-center justify-between ">
         <Link href="/">
           <div className="topLeft">
-            <span className="logo font-bold text-3xl text-blue-500 cursor-pointer">
+            <span className="logo font-bold text-2xl text-blue-500 cursor-pointer">
               NecAdmin
             </span>
           </div>
