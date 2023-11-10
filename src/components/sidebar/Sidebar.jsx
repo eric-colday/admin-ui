@@ -30,7 +30,7 @@ const Sidebar = () => {
       >
         <div className="h-full px-8 flex items-center justify-between ">
           <Link href="/">
-            <div className="topLeft">
+            <div>
               <span className="logo font-bold text-2xl text-blue-500 cursor-pointer">
                 NecAdmin
               </span>
@@ -44,8 +44,8 @@ const Sidebar = () => {
                 flex flex-col
                 fixed top-0 right-0 h-full w-64 z-50
                 bg-[#0f172a] shadow-lg
-                transition duration-300 ease-in-out
-                transform translate-x-0
+                transition duration-500  ease-in-out
+                transform translate-x-0 
                 "
               >
                 <CloseIcon

@@ -8,9 +8,9 @@ import { ThemeContext } from "@/context/ThemeContext";
 const FeaturedInfo = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="w-full grid md:grid-cols-3 sm:grid-cols-2 gap-5 my-5 ml-80 max-[425px]:ml-24 mx-5">
+    <div className="grid grid-cols-3 max-[920px]:grid-cols-2 max-[768px]:grid-cols-3 max-[632px]:grid-cols-2 max-[430px]:grid-cols-1 gap-5 ml-72 max-[768px]:ml-2 max-[768px]:pt-28 px-5 py-10">
       <div
-        className="flex flex-col content-center gap-2 w-full h-52 px-5 pt-12 rounded-lg shadow offset-x-0 offset-y-0 blur-15 opacity-75"
+        className="flex flex-col content-center gap-2 w-full h-52 px-5 pt-12 rounded-3xl shadow offset-x-0 offset-y-0 blur-15 opacity-75"
         style={
           theme === "dark"
             ? { backgroundColor: "#0f172a", color: "white" }
@@ -28,7 +28,7 @@ const FeaturedInfo = () => {
         <span className="text-slate-400">Par rapport au mois dernier</span>
       </div>
       <div
-        className="flex flex-col gap-2 w-full h-52 px-5 pt-12 rounded-lg shadow offset-x-0 offset-y-0 blur-15 opacity-75"
+        className="flex flex-col gap-2 w-full h-52 px-5 pt-12 rounded-3xl shadow offset-x-0 offset-y-0 blur-15 opacity-75"
         style={
           theme === "dark"
             ? { backgroundColor: "#0f172a", color: "white" }
@@ -46,7 +46,7 @@ const FeaturedInfo = () => {
         <span className="text-slate-400">Par rapport au mois dernier</span>
       </div>
       <div
-        className="flex flex-col content-center gap-2 w-full h-52 px-5 pt-12 rounded-lg shadow offset-x-0 offset-y-0 blur-15 opacity-75"
+        className="flex flex-col content-center gap-2 w-full h-52 px-5 pt-12 rounded-3xl shadow offset-x-0 offset-y-0 blur-15 opacity-75"
         style={
           theme === "dark"
             ? { backgroundColor: "#0f172a", color: "white" }
