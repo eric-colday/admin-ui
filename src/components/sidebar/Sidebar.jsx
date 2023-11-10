@@ -46,7 +46,7 @@ const Sidebar = () => {
                 bg-[#0f172a] shadow-lg
                 transition duration-300 ease-in-out
                 transform translate-x-0
-              "
+                "
               >
                 <CloseIcon
                   onClick={handleShowLinks}
@@ -69,19 +69,19 @@ const Sidebar = () => {
                   <ul className="flex flex-col p-3 gap-6">
                     <Link href="/" className="flex items-center">
                       <HomeIcon className="text-xl mr-2" />
-                      <li className="cursor-pointer flex items-center max-[425px]:hidden">
+                      <li className="cursor-pointer flex items-center">
                         Tableau de bord
                       </li>
                     </Link>
                     <Link href="/utilisateurs" className="flex items-center">
                       <PermIdentityIcon className="text-xl mr-2" />
-                      <li className="cursor-pointer flex items-center max-[425px]:hidden  ">
+                      <li className="cursor-pointer flex items-center">
                         Utilisateurs
                       </li>
                     </Link>
                     <Link href="/produits" className="flex items-center">
                       <StorefrontIcon className="text-xl mr-2" />
-                      <li className="cursor-pointer flex items-center max-[425px]:hidden">
+                      <li className="cursor-pointer flex items-center">
                         Produits
                       </li>
                     </Link>
@@ -166,19 +166,19 @@ const Sidebar = () => {
             <ul className="flex flex-col p-3 gap-6">
               <Link href="/" className="flex items-center">
                 <HomeIcon className="text-xl mr-2" />
-                <li className="cursor-pointer flex items-center max-[425px]:hidden">
+                <li className="cursor-pointer flex items-center">
                   Tableau de bord
                 </li>
               </Link>
               <Link href="/utilisateurs" className="flex items-center">
                 <PermIdentityIcon className="text-xl mr-2" />
-                <li className="cursor-pointer flex items-center max-[425px]:hidden  ">
+                <li className="cursor-pointer flex items-center  ">
                   Utilisateurs
                 </li>
               </Link>
               <Link href="/produits" className="flex items-center">
                 <StorefrontIcon className="text-xl mr-2" />
-                <li className="cursor-pointer flex items-center max-[425px]:hidden">
+                <li className="cursor-pointer flex items-center">
                   Produits
                 </li>
               </Link>
