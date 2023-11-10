@@ -3,9 +3,9 @@ import Sidebar from "@/components/sidebar/Sidebar";
 
 export default function Home() {
   return (
-    <div className="flex gap-5">
+    <div>
       <Sidebar />
-      <FeaturedInfo />
+      {/* <FeaturedInfo /> */}
     </div>
   );
 }

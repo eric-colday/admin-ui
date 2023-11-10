@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <ThemeContextProvider>
           <ThemeProvider>
             <main>
-              <Topbar />
+              {/* <Topbar /> */}
               {children}
             </main>
           </ThemeProvider>

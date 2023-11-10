@@ -1,49 +1,197 @@
 "use client";
 
 import Link from "next/link";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import ArticleIcon from "@mui/icons-material/Article";
+import CloseIcon from "@mui/icons-material/Close";
+import PersonIcon from "@mui/icons-material/Person";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { ThemeContext } from "@/context/ThemeContext";
+import ThemeToggle from "../themeToggle/ThemeToggle";
+import Image from "next/image";
 
 const Sidebar = () => {
   const { theme } = useContext(ThemeContext);
+  const [showLinks, setShowLinks] = useState(false);
+
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+  };
+
   return (
-    <div
-      className="flex-1 h-[calc(100vh-50px)] fixed top-50 z-50 pt-5 max-[425px]:w-20 "
-      style={{ backgroundColor: "#0f172a" }}
-    >
-      <div className="p-10 max-[425px]:p-5 text-slate-50">
-        <div className="mb-2">
-          <h3 className="text-xl max-[425px]:hidden">Tableau de bord</h3>
-          <ul className="p-3">
-            <Link href="/" className="flex items-center">
-              <HomeIcon className="text-xl mr-2 max-[425px]:mb-4" />
-              <li className="p-2 cursor-pointer flex items-center rounded-sm max-[425px]:hidden">
-                Accueil
-              </li>
+    <div>
+      {/* Menu 2 */}
+      <div
+        className="w-full h-20 border-b fixed top-0 z-50 hidden max-[768px]:block"
+        style={{ backgroundColor: "#0f172a" }}
+      >
+        <div className="h-full px-8 flex items-center justify-between ">
+          <Link href="/">
+            <div className="topLeft">
+              <span className="logo font-bold text-2xl text-blue-500 cursor-pointer">
+                NecAdmin
+              </span>
+            </div>
+          </Link>
+          <div className="flex items-center p-3 gap-6">
+            {/* Menu 3 */}
+            {showLinks ? (
+              <div
+                className="
+                flex flex-col
+                fixed top-0 right-0 h-full w-64 z-50
+                bg-[#0f172a] shadow-lg
+                transition duration-300 ease-in-out
+                transform translate-x-0
+              "
+              >
+                <CloseIcon
+                  onClick={handleShowLinks}
+                  className="
+                  absolute top-3 right-3
+                  text-white text-2xl cursor-pointer
+                  "
+                />
+                <div className="flex flex-col p-3 gap-6">
+                  <div className="flex items-center gap-5">
+                    <img
+                      src="/sidebar/veste-esprit-campus3.webp"
+                      className="w-16 h-16 object-cover rounded-full"
+                    />
+                    <div className="flex flex-col gap-1">
+                      <span className="text-sm">Eric Colday</span>
+                      <span className="text-white text-sm">Admin</span>
+                    </div>
+                  </div>
+                  <ul className="flex flex-col p-3 gap-6">
+                    <Link href="/" className="flex items-center">
+                      <HomeIcon className="text-xl mr-2" />
+                      <li className="cursor-pointer flex items-center max-[425px]:hidden">
+                        Tableau de bord
+                      </li>
+                    </Link>
+                    <Link href="/utilisateurs" className="flex items-center">
+                      <PermIdentityIcon className="text-xl mr-2" />
+                      <li className="cursor-pointer flex items-center max-[425px]:hidden  ">
+                        Utilisateurs
+                      </li>
+                    </Link>
+                    <Link href="/produits" className="flex items-center">
+                      <StorefrontIcon className="text-xl mr-2" />
+                      <li className="cursor-pointer flex items-center max-[425px]:hidden">
+                        Produits
+                      </li>
+                    </Link>
+                    <Link href="/articles" className="flex items-center">
+                      <ArticleIcon className="text-xl mr-2" />
+                      <li className=" cursor-pointer flex items-center ">
+                        Articles
+                      </li>
+                    </Link>
+                    <Link href="/connexion">
+                      <LogoutIcon className="text-3xl text-white cursor-pointer mb-2" />
+                    </Link>
+                    <ThemeToggle />
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <Image
+                src="/burger.svg"
+                alt="menu"
+                width={30}
+                height={30}
+                className={showLinks ? "" : "hidden max-[600px]:block"}
+                onClick={handleShowLinks}
+                style={
+                  theme === "dark"
+                    ? { filter: "invert(1)" }
+                    : { filter: "invert(0)" }
+                }
+              />
+            )}
+          </div>
+          <div className="flex items-center p-3 gap-6 max-[600px]:hidden">
+            <Link href="/" className="flex items-center cursor-pointer ">
+              <HomeIcon className="text-xl mr-2" />
             </Link>
-            <Link href="/utilisateurs" className="flex items-center">
-              <PermIdentityIcon className="text-xl mr-2 max-[425px]:mb-4" />
-              <li className="p-2 cursor-pointer flex items-center rounded-sm max-[425px]:hidden  ">
-                Utilisateurs
-              </li>
+            <Link
+              href="/utilisateurs"
+              className="flex items-center cursor-pointer"
+            >
+              <PermIdentityIcon className="text-xl mr-2" />
             </Link>
-            <Link href="/produits" className="flex items-center">
-              <StorefrontIcon className="text-xl mr-2 max-[425px]:mb-4" />
-              <li className="p-2 cursor-pointer flex items-center rounded-sm max-[425px]:hidden">
-                Produits
-              </li>
+            <Link href="/produits" className="flex items-center cursor-pointer">
+              <StorefrontIcon className="text-xl mr-2" />
             </Link>
-            <Link href="/articles" className="flex items-center">
-              <ArticleIcon className="text-xl mr-2 max-[425px]:mb-4" />
-              <li className="p-2 cursor-pointer flex items-center rounded-sm max-[425px]:hidden">
-                Articles
-              </li>
+            <Link href="/articles" className="flex items-center cursor-pointer">
+              <ArticleIcon className="text-xl mr-2" />
             </Link>
-          </ul>
+            <ThemeToggle />
+            <img
+              src="/sidebar/veste-esprit-campus3.webp"
+              className="w-12 h-12 object-cover rounded-full"
+            />
+            <Link href="/connexion">
+              <LogoutIcon className="text-3xl text-white cursor-pointer" />
+            </Link>
+          </div>
+        </div>
+      </div>
+      {/* Menu 1 */}
+      <div
+        className="flex-1 h-[calc(100vh-0px)] fixed top-50 z-50 max-[768px]:hidden"
+        style={{ backgroundColor: "#0f172a" }}
+      >
+        <div className="p-10 text-slate-50 ">
+          <Link href="/">
+            <h1 className="font-bold text-2xl text-blue-500 cursor-pointer">
+              NecAdmin
+            </h1>
+          </Link>
+          <div className="flex flex-col p-3 gap-6">
+            <div className="flex items-center gap-5">
+              <img
+                src="/sidebar/veste-esprit-campus3.webp"
+                className="w-16 h-16 object-cover rounded-full"
+              />
+              <div className="flex flex-col gap-1">
+                <span className="text-sm">Eric Colday</span>
+                <span className="text-white text-sm">Admin</span>
+              </div>
+            </div>
+            <ul className="flex flex-col p-3 gap-6">
+              <Link href="/" className="flex items-center">
+                <HomeIcon className="text-xl mr-2" />
+                <li className="cursor-pointer flex items-center max-[425px]:hidden">
+                  Tableau de bord
+                </li>
+              </Link>
+              <Link href="/utilisateurs" className="flex items-center">
+                <PermIdentityIcon className="text-xl mr-2" />
+                <li className="cursor-pointer flex items-center max-[425px]:hidden  ">
+                  Utilisateurs
+                </li>
+              </Link>
+              <Link href="/produits" className="flex items-center">
+                <StorefrontIcon className="text-xl mr-2" />
+                <li className="cursor-pointer flex items-center max-[425px]:hidden">
+                  Produits
+                </li>
+              </Link>
+              <Link href="/articles" className="flex items-center">
+                <ArticleIcon className="text-xl mr-2" />
+                <li className=" cursor-pointer flex items-center ">Articles</li>
+              </Link>
+              <Link href="/connexion">
+                <LogoutIcon className="text-3xl text-white cursor-pointer mb-2" />
+              </Link>
+              <ThemeToggle />
+            </ul>
+          </div>
         </div>
       </div>
     </div>

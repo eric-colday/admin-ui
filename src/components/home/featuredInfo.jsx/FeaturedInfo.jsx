@@ -8,7 +8,7 @@ import { ThemeContext } from "@/context/ThemeContext";
 const FeaturedInfo = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="w-full grid md:grid-cols-3 sm:grid-cols-2 gap-5 my-5 ml-64 max-[425px]:ml-24 mx-5">
+    <div className="w-full grid md:grid-cols-3 sm:grid-cols-2 gap-5 my-5 ml-80 max-[425px]:ml-24 mx-5">
       <div
         className="flex flex-col content-center gap-2 w-full h-52 px-5 pt-12 rounded-lg shadow offset-x-0 offset-y-0 blur-15 opacity-75"
         style={
