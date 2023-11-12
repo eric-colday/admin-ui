@@ -104,17 +104,13 @@ const Sidebar = () => {
                 alt="menu"
                 width={30}
                 height={30}
-                className={showLinks ? "" : "hidden max-[600px]:block"}
+                className={showLinks ? "" : "hidden  max-[600px]:block"}
                 onClick={handleShowLinks}
-                style={
-                  theme === "dark"
-                    ? { filter: "invert(1)" }
-                    : { filter: "invert(0)" }
-                }
+                style={{ filter: "invert(1)" }}
               />
             )}
           </div>
-          <div className="flex items-center p-3 gap-6 max-[600px]:hidden">
+          <div className="flex items-center p-3 gap-6 text-white max-[600px]:hidden">
             <Link href="/" className="flex items-center cursor-pointer ">
               <HomeIcon className="text-xl mr-2" />
             </Link>
@@ -136,7 +132,7 @@ const Sidebar = () => {
               className="w-12 h-12 object-cover rounded-full"
             />
             <Link href="/connexion">
-              <LogoutIcon className="text-3xl text-white cursor-pointer" />
+              <LogoutIcon className="text-3xl cursor-pointer" />
             </Link>
           </div>
         </div>
@@ -178,9 +174,7 @@ const Sidebar = () => {
               </Link>
               <Link href="/produits" className="flex items-center">
                 <StorefrontIcon className="text-xl mr-2" />
-                <li className="cursor-pointer flex items-center">
-                  Produits
-                </li>
+                <li className="cursor-pointer flex items-center">Produits</li>
               </Link>
               <Link href="/articles" className="flex items-center">
                 <ArticleIcon className="text-xl mr-2" />

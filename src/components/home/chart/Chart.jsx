@@ -62,14 +62,14 @@ const Chart = () => {
 
   return (
     <div
-      className="mt-10 p-10 shadow offset-x-0 offset-y-0 blur-15 opacity-75"
+      className="mt-10 p-10 max-[470px]:p-0 max-[470px]:text-center  shadow offset-x-0 offset-y-0 blur-15 opacity-75"
       style={
         theme === "dark"
           ? { backgroundColor: "#0f172a", color: "white" }
           : { backgroundColor: "#E6F4FE", color: "black" }
       }
     >
-      <h3 className="pb-5 text-2xl">Statistique d'utilisateurs</h3>
+      <h3 className="pb-5 text-2xl max-[470px]:text-xl max-[470px]:pt-5">Analytics</h3>
       <ResponsiveContainer width="100%" height={300}>
         <AreaChart
           width={500}
