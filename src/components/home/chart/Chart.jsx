@@ -69,7 +69,7 @@ const Chart = () => {
           : { backgroundColor: "#E6F4FE", color: "black" }
       }
     >
-      <h3 className="pb-5 text-2xl max-[470px]:text-xl max-[470px]:pt-5">Analytics</h3>
+      <h2 className="pb-5 text-2xl max-[470px]:text-xl max-[470px]:pt-5">Analyse</h2>
       <ResponsiveContainer width="100%" height={300}>
         <AreaChart
           width={500}

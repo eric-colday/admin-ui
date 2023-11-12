@@ -8,9 +8,9 @@ import { ThemeContext } from "@/context/ThemeContext";
 const FeaturedInfo = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="grid grid-cols-3 max-[920px]:grid-cols-2 max-[768px]:grid-cols-3 max-[632px]:grid-cols-2 max-[430px]:grid-cols-1 gap-5 ">
+    <div className="grid grid-cols-3 max-[920px]:grid-cols-2 max-[818px]:grid-cols-3 max-[607px]:grid-cols-2 max-[431px]:grid-cols-1 gap-5 ">
       <div
-        className="flex flex-col content-center gap-2 w-full h-52 px-5 pt-12 max-[430px]:pl-20 max-[430px]:pl-20 rounded-3xl shadow offset-x-0 offset-y-0 blur-15 opacity-75"
+        className="flex flex-col content-center gap-2 w-full h-52 px-5 pt-12 max-[430px]:pl-20 rounded-3xl shadow offset-x-0 offset-y-0 blur-15 opacity-75"
         style={
           theme === "dark"
             ? { backgroundColor: "#0f172a", color: "white" }

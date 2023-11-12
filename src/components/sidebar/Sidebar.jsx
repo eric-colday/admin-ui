@@ -25,7 +25,7 @@ const Sidebar = () => {
     <div>
       {/* Menu 2 */}
       <div
-        className="w-full h-20 border-b fixed top-0 z-50 hidden max-[768px]:block"
+        className="w-full h-20 border-b fixed top-0 z-50 hidden max-[818px]:block"
         style={{ backgroundColor: "#0f172a" }}
       >
         <div className="h-full px-8 flex items-center justify-between ">
@@ -139,7 +139,7 @@ const Sidebar = () => {
       </div>
       {/* Menu 1 */}
       <div
-        className="flex-1 h-[calc(100vh-0px)] fixed top-50 z-50 max-[768px]:hidden"
+        className="flex-1 h-[calc(100vh-0px)] fixed top-50 z-50 max-[818px]:hidden"
         style={{ backgroundColor: "#0f172a" }}
       >
         <div className="p-10 text-slate-50 ">
