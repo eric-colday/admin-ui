@@ -14,46 +14,76 @@ import {
 
 const data = [
   {
-    name: "Lundi",
+    name: "Jan",
     utilisateurs: 4000,
     commandes: 2400,
     revenus: 2400,
   },
   {
-    name: "Mardi",
+    name: "Fev",
     utilisateurs: 3000,
     commandes: 1398,
     revenus: 2210,
   },
   {
-    name: "Mercredi",
+    name: "Mar",
     utilisateurs: 2000,
     commandes: 9800,
     revenus: 2290,
   },
   {
-    name: "Jeudi",
+    name: "Avr",
     utilisateurs: 2780,
     commandes: 3908,
     revenus: 2000,
   },
   {
-    name: "Vendredi",
+    name: "Mai",
     utilisateurs: 1890,
     commandes: 4800,
     revenus: 2181,
   },
   {
-    name: "Samedi",
+    name: "Jui",
     utilisateurs: 2390,
     commandes: 3800,
     revenus: 2500,
   },
   {
-    name: "Dimanche",
+    name: "Juil",
     utilisateurs: 3490,
     commandes: 4300,
     revenus: 2100,
+  },
+  {
+    name: "Août",
+    utilisateurs: 4000,
+    commandes: 2400,
+    revenus: 2400,
+  },
+  {
+    name: "Sep",
+    utilisateurs: 3000,
+    commandes: 1398,
+    revenus: 2210,
+  },
+  {
+    name: "Oct",
+    utilisateurs: 2000,
+    commandes: 9800,
+    revenus: 2290,
+  },
+  {
+    name: "Nov",
+    utilisateurs: 2780,
+    commandes: 3908,
+    revenus: 2000,
+  },
+  {
+    name: "Dec",
+    utilisateurs: 1890,
+    commandes: 4800,
+    revenus: 2181,
   },
 ];
 
@@ -69,7 +99,9 @@ const Chart = () => {
           : { backgroundColor: "#E6F4FE", color: "black" }
       }
     >
-      <h2 className="pb-5 text-2xl max-[470px]:text-xl max-[470px]:pt-5">Analyse</h2>
+      <h2 className="pb-5 text-2xl max-[470px]:text-xl max-[470px]:pt-5">
+        Analyse
+      </h2>
       <ResponsiveContainer width="100%" height={300}>
         <AreaChart
           width={500}
