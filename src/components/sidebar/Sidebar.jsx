@@ -96,6 +96,11 @@ const Sidebar = () => {
                     </Link>
                     <ThemeToggle />
                   </ul>
+                  <div className="text-sm mt-44 text-center">
+                    <span>
+                      © Copyright 2023. <br /> All Rights Reserved
+                    </span>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -185,6 +190,11 @@ const Sidebar = () => {
               </Link>
               <ThemeToggle />
             </ul>
+          </div>
+          <div className="text-sm mt-44">
+            <span>
+              © Copyright 2023. <br /> All Rights Reserved
+            </span>
           </div>
         </div>
       </div>
