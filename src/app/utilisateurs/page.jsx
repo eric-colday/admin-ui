@@ -5,6 +5,8 @@ import React from "react";
 import Pagination from "@/components/pagination/Pagination";
 import { Users } from "@/data";
 import Table from "@/components/utilisateurs/Table";
+import { notFound } from "next/navigation";
+
 
 const getData = () => {
   const data = Users;
@@ -36,7 +38,7 @@ const Utilisateurs = ({ searchParams }) => {
           </h1>
           <div className="w-full flex gap-6">
             <Search placeholder="Recherche utilisateur..." />
-            <Link href="/utilisateurs/nouvel-utilisateur">
+            <Link href="/utilisateurs/creer">
               <div className="flex justify-end ">
                 <button className="w-20 bg-blue-950 text-white cursor-pointer p-2 rounded-2xl text-center">
                   Créer

@@ -3,6 +3,7 @@ import FeaturedInfo from "@/components/home/featuredInfo.jsx/FeaturedInfo";
 import WidgetLeft from "@/components/home/widgetLeft/WidgetLeft";
 import WidgetRight from "@/components/home/widgetRight/WidgetRight";
 import Sidebar from "@/components/home/sidebar/Sidebar";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <WidgetRight />
           <WidgetLeft />
         </div>
+        <Footer />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 export const Users = [
   {
+    id: '1',
     name: "John Doe",
     img: "/person/2.jpeg",
     email: "john@example.com",
@@ -8,6 +9,7 @@ export const Users = [
     createdAt: "2019-08-30T13:46:57.783Z",
   },
   {
+    id: '2',
     name: "Jane Smith",
     img: "/person/1.jpeg",
     email: "jane@example.com",
@@ -16,6 +18,7 @@ export const Users = [
     createdAt: "2019-08-30T13:46:57.783Z",
   },
   {
+    id: '3',
     name: "Alice Johnson",
     img: "/person/3.jpeg",
     email: "alice@example.com",
@@ -24,6 +27,7 @@ export const Users = [
     createdAt: "2019-08-30T13:46:57.783Z",
   },
   {
+    id: '4',
     name: "Bob Brown",
     img: "/person/4.jpeg",
     email: "bob@example.com",
@@ -32,6 +36,7 @@ export const Users = [
     createdAt: "2019-08-30T13:46:57.783Z",
   },
   {
+    id: '5',
     name: "Charlie Davis",
     img: "/person/5.jpeg",
     email: "charlie@example.com",
@@ -40,6 +45,7 @@ export const Users = [
     createdAt: "2019-08-30T13:46:57.783Z",
   },
   {
+    id: '6',
     name: "David Green",
     img: "/person/6.jpeg",
     email: "david@example.com",
@@ -48,6 +54,7 @@ export const Users = [
     createdAt: "2019-08-30T13:46:57.783Z",
   },
   {
+    id: '7',
     name: "Eva White",
     img: "/person/7.jpeg",
     email: "eva@example.com",
@@ -56,6 +63,7 @@ export const Users = [
     createdAt: "2019-08-30T13:46:57.783Z",
   },
   {
+    id: '8',
     name: "Frank Black",
     img: "/person/8.jpeg",
     email: "frank@example.com",
@@ -64,6 +72,33 @@ export const Users = [
     createdAt: "2019-08-30T13:46:57.783Z",
   },
 ];
+
+export const Orders = [
+  {
+    id: "1",
+    amount: 100.0,
+    createdAt: "2019-08-30T13:46:57.783Z",
+    status: "terminé",
+  },
+  {
+    id: "2",
+    amount: 200.0,
+    createdAt: "2019-08-30T13:46:57.783Z",
+    status: "en cours",
+  },
+  {
+    id: "3",
+    amount: 300.0,
+    createdAt: "2019-08-30T13:46:57.783Z",
+    status: "terminé",
+  },
+  {
+    id: "4",
+    amount: 400.0,
+    createdAt: "2019-08-30T13:46:57.783Z",
+    status: "en cours",
+  },
+]
 
 export const fetchUsers = (q, page) => {
   const regex = new RegExp(q, "i");

@@ -4,8 +4,10 @@ import React, { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import Link from "next/link";
 
-const Table = ({data, page}) => {
+
+const Table = ({ data, page }) => {
   const { theme } = useContext(ThemeContext);
   return (
     <table
@@ -46,12 +48,14 @@ const Table = ({data, page}) => {
               {user.status ? (
                 <span className="text-green-500">Actif</span>
               ) : (
-                <span className="text-red-500">Inactif</span>
+                <span className="text-red-400">Inactif</span>
               )}
             </td>
             <td className="border-b pl-4">
-              <EditIcon className="text-green-500 mr-10 cursor-pointer" />
-              <DeleteOutlineIcon className="text-red-500 cursor-pointer" />
+              <Link href={`/utilisateurs/${user.id}`}>
+                <EditIcon className="text-green-500 mr-10 cursor-pointer" />
+              </Link>
+              <DeleteOutlineIcon className="text-red-400 cursor-pointer" />
             </td>
           </tr>
         ))}
