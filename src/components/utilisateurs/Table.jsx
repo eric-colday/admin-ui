@@ -6,9 +6,14 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import Link from "next/link";
 
-
 const Table = ({ data, page }) => {
   const { theme } = useContext(ThemeContext);
+  
+
+  const handleDelete = (id) => {
+    console.log("delete");
+  };
+
   return (
     <table
       className="mt-14 w-full"
@@ -52,10 +57,13 @@ const Table = ({ data, page }) => {
               )}
             </td>
             <td className="border-b pl-4">
-              <Link href={`/utilisateurs/${user.id}`}>
+              <Link href={`/utilisateurs/${user.slug}`}>
                 <EditIcon className="text-green-500 mr-10 cursor-pointer" />
               </Link>
-              <DeleteOutlineIcon className="text-red-400 cursor-pointer" />
+              <DeleteOutlineIcon
+                className="text-red-400 cursor-pointer"
+                onClick={() => handleDelete(user.id)}
+              />
             </td>
           </tr>
         ))}
