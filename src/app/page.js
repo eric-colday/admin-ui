@@ -2,7 +2,7 @@ import Chart from "@/components/home/chart/Chart";
 import FeaturedInfo from "@/components/home/featuredInfo.jsx/FeaturedInfo";
 import WidgetLeft from "@/components/home/widgetLeft/WidgetLeft";
 import WidgetRight from "@/components/home/widgetRight/WidgetRight";
-import Sidebar from "@/components/sidebar/Sidebar";
+import Sidebar from "@/components/home/sidebar/Sidebar";
 
 export default function Home() {
   return (

@@ -10,7 +10,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { ThemeContext } from "@/context/ThemeContext";
-import ThemeToggle from "../themeToggle/ThemeToggle";
+import ThemeToggle from "../../themeToggle/ThemeToggle";
 import Image from "next/image";
 
 const Sidebar = () => {
@@ -31,9 +31,9 @@ const Sidebar = () => {
         <div className="h-full px-8 flex items-center justify-between ">
           <Link href="/">
             <div>
-              <span className="logo font-bold text-2xl text-blue-500 cursor-pointer">
+              <h1 className="logo font-bold text-2xl text-blue-500 cursor-pointer">
                 NecAdmin
-              </span>
+              </h1>
             </div>
           </Link>
           <div className="flex items-center p-3 gap-6">
@@ -149,9 +149,9 @@ const Sidebar = () => {
       >
         <div className="p-10 text-slate-50 ">
           <Link href="/">
-            <span className="font-bold text-2xl text-blue-500 cursor-pointer">
+            <h1 className="font-bold text-2xl text-blue-500 cursor-pointer">
               NecAdmin
-            </span>
+            </h1>
           </Link>
           <div className="flex flex-col p-3 gap-6">
             <div className="flex items-center gap-5">
