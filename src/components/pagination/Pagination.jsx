@@ -17,7 +17,7 @@ const Pagination = ({ count }) => {
   const hasNext = ITEM_PER_PAGE * (parseInt(page) - 1) + ITEM_PER_PAGE < count;
 
   const handleChangePage = (type) => {
-    type === "precedent"
+    type === "prev"
       ? params.set("page", parseInt(page) - 1)
       : params.set("page", parseInt(page) + 1);
     replace(`${pathname}?${params}`);
@@ -28,14 +28,14 @@ const Pagination = ({ count }) => {
       <button
         className="cursor-pointer px-2 py-4 "
         disabled={!hasPrev}
-        onClick={() => handleChangePage("precedent")} 
+        onClick={() => handleChangePage("prev")} 
       >
         Précédent
       </button>
       <button
         className="cursor-pointer px-2 py-4"
         disabled={!hasNext}
-        onClick={() => handleChangePage("suivant")}
+        onClick={() => handleChangePage("next")}
       >
         Suivant
       </button>
