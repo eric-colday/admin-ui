@@ -27,7 +27,7 @@ const Connexion = () => {
     });
   };
   return (
-    <div className="flex items-center flex-col gap-4 pt-20 pb-40">
+    <div className="flex items-center flex-col gap-4 pt-20 pb-56">
       <h2 className="text-center text-4xl sm:text-5xl font-bold">{success ? success : "Se connecter"}</h2>
       <h3 className="text-sm sm:text-xl">S'il vous plaît connectez-vous pour la suite</h3>
 

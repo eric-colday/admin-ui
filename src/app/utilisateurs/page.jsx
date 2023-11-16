@@ -30,7 +30,7 @@ const Utilisateurs = ({ searchParams }) => {
 
   return (
     <div> 
-      <Sidebar />
+      <Sidebar data={data} />
       <div className="ml-72 pb-20 max-[818px]:ml-0 max-[818px]:mt-12 px-10 pt-20">
         <div className="grid grid-cols-2 max-[552px]:grid-cols-0 max-[552px]:flex max-[552px]:flex-col max-[552px]:gap-10 items-center">
           <h1 className="text-3xl  max-[552px]:text-3xl font-bold">
