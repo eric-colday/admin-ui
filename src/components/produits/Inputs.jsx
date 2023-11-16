@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import PublishIcon from "@mui/icons-material/Publish";
 
 const Inputs = () => {
   const [file, setFile] = useState("");
@@ -30,12 +29,13 @@ const Inputs = () => {
         <div>
           <div className="mt-10">
             <label htmlFor="" className="text-sm">
-              Nom d'utilisateur
+              Titre
             </label>
             <input
               type="text"
-              id="username"
-              placeholder="Eric"
+              name="title"
+              placeholder="Jean skinny"
+              id="title"
               required
               className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
               // onChange={handleChange}
@@ -43,12 +43,13 @@ const Inputs = () => {
           </div>
           <div className="mt-5">
             <label htmlFor="fullname" className="text-sm">
-              Nom et prenom
+              Description
             </label>
-            <input
+            <textarea
               type="text"
-              id="fullname"
-              placeholder="Eric Colday"
+              placeholder="description... "
+              name="desc"
+              id="desc"
               required
               className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
               // onChange={handleChange}
@@ -56,107 +57,84 @@ const Inputs = () => {
           </div>
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Email
+              Catégories
             </label>
-            <input
-              type="email"
-              id="email"
-              placeholder="eric@gmail.com"
-              required
+            <select
+              name="category"
+              id="category"
+              defaultValue={"jeans"}
               className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
-              // onChange={handleChange}
-            />
+              // onChange={handleCat}
+            >
+              <option value="jeans">Jeans</option>
+              <option value="t-shirts">T-shirts</option>
+              <option value="vestes">Vestes</option>
+              <option value="chaussures">Chaussures</option>
+            </select>
           </div>
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Mot de passe
+              Taille
             </label>
-            <input
-              type="password"
-              id="password"
-              placeholder="password"
-              required
+            <select
+              name="size"
+              id="size"
+              defaultValue={"m"}
               className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
-              // onChange={handleChange}
-            />
-          </div>
-          <div className="mt-5">
-            <label htmlFor="" className="text-sm">
-              Téléphone
-            </label>
-            <input
-              type="text"
-              id="phone"
-              placeholder="+33 6 98 34 20 60"
-              required
-              className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
-              // onChange={handleChange}
-            />
+              // onChange={handleSize}
+            >
+              <option value="xs">XS</option>
+              <option value="s">S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+              <option value="xxl">XXL</option>
+            </select>
           </div>
         </div>
         {/* Input 2 */}
         <div className="mt-5 max-[425px]:mt-0">
           <div className="mt-5 max-[425px]:mt-0">
             <label htmlFor="" className="text-sm">
-              Adresse
+              Couleur
             </label>
             <input
               type="text"
-              id="address"
-              placeholder="Paris, France"
+              name="color"
+              id="color"
+              placeholder="white, wlack, red, blue, yellow, green"
               required
               className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
-              // onChange={handleChange}
+              // onChange={handleColor}
             />
           </div>
           <div className="mt-12 max-[425px]:mt-5">
             <label htmlFor="" className="text-sm">
-              Genre
+              Prix
             </label>
             <div className="flex gap-2">
               <input
-                type="radio"
-                name="gender"
-                id="gender"
-                value="male"
+                type="number"
+                name="price"
+                id="price"
+                placeholder="100"
                 required
                 // onChange={handleChange}
+                className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
+              
               />
-              <label htmlFor="male">Homme</label>
+            </div>
+            <div className="mt-5">
+              <label htmlFor="male">Stock</label>
               <input
-                type="radio"
-                name="gender"
-                id="gender"
-                value="female"
+                type="text"
+                name="inStock"
+                id="inStock"
+                placeholder="123"
+                required
                 // onChange={handleChange}
+                className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
               />
-              <label htmlFor="female">Femme</label>
-            </div>
-            <div className="mt-5">
-              <label htmlFor="" className="text-sm">
-                Active
-              </label>
-              <select
-                name="active"
-                id="active"
-                className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
-                // onChange={handleChange}
-              >
-                <option value="true">Oui</option>
-                <option value="false">Non</option>
-              </select>
-            </div>
-            <div className="mt-5">
-              <label htmlFor="role">Rôle</label>
-              <select
-                name="role"
-                id="role"
-                className="w-full border outline-none border-gray-300 rounded-xl p-2 mt-2"
-                // onChange={handleChange}
-              >
-                <option value="admin">Admin</option>
-                <option value="user">Client</option>
-              </select>
             </div>
             <div className="max-[425px]:text-center">
               <button className="mt-14 w-32 bg-blue-950 text-white cursor-pointer p-2 rounded-2xl text-center ">
