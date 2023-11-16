@@ -26,44 +26,48 @@ const Table = ({ data, page }) => {
     >
       <thead>
         <tr className="h-20">
-          <td className="border-b pl-4">Nom</td>
-          <td className="border-b pl-4 max-[910px]:hidden">E-mail</td>
-          <td className="border-b pl-4 max-[1115px]:hidden">Date</td>
-          <td className="border-b pl-4 max-[421px]:hidden">Rôle</td>
+          <td className="border-b pl-4 max-[910px]:hidden">ID</td>
+          <td className="border-b pl-4">Produits</td>
+          <td className="border-b pl-4 max-[1115px]:hidden">Prix</td>
+          <td className="border-b pl-4 max-[486px]:hidden">Stock</td>
           <td className="border-b pl-4 max-[978px]:hidden">Statut</td>
           <td className="border-b pl-4">Action</td>
         </tr>
       </thead>
       <tbody>
-        {data.slice((page - 1) * 4, (page - 1) * 4 + 4).map((user) => (
-          <tr className="h-14" key={user.id}>
+        {data.slice((page - 1) * 4, (page - 1) * 4 + 4).map((item) => (
+          <tr className="h-14" key={item.id}>
+            <td className="border-b pl-4 max-[910px]:hidden">
+              {item.id.length > 2 ? item.id.slice(0, 2) + "..." : item.id}
+            </td>
             <td className="border-b pl-4 py-4 flex items-center gap-2">
               <img
-                src={user.img}
+                src={item.image[0]}
                 alt=""
                 className="w-10 h-10 object-cover rounded-full max-[357px]:hidden"
-              />{" "}
-              {user.name}
+              />
+              {item.title.length > 10
+                ? item.title.slice(0, 10) + "..."
+                : item.title}
             </td>
-            <td className="border-b pl-4 max-[910px]:hidden">{user.email}</td>
             <td className="border-b pl-4 max-[1115px]:hidden">
-              {new Date(user.createdAt).toLocaleString("fr-FR") || ""}
+              {item.price} €
             </td>
-            <td className="border-b pl-4 max-[421px]:hidden">{user.role}</td>
+            <td className="border-b pl-4 max-[486px]:hidden">{item.stock}</td>
             <td className="border-b pl-4 max-[978px]:hidden">
-              {user.status ? (
-                <span className="text-green-500">Actif</span>
+              {item.inStock ? (
+                <span className="text-green-500">En stock</span>
               ) : (
-                <span className="text-red-400">Inactif</span>
+                <span className="text-red-400">En rupture</span>
               )}
             </td>
             <td className="border-b pl-4">
-              <Link href={`/utilisateurs/${user.slug}`}>
+              <Link href={`/utilisateurs/${item.slug}`}>
                 <EditIcon className="text-green-500 mr-10 cursor-pointer" />
               </Link>
               <DeleteOutlineIcon
                 className="text-red-400 cursor-pointer"
-                onClick={() => handleDelete(user.slug)}
+                onClick={() => handleDelete(item.slug)}
               />
             </td>
           </tr>

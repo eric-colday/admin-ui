@@ -8,6 +8,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import ArticleIcon from "@mui/icons-material/Article";
 import CloseIcon from "@mui/icons-material/Close";
 import PersonIcon from "@mui/icons-material/Person";
+import ListAltIcon from "@mui/icons-material/ListAlt";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { ThemeContext } from "@/context/ThemeContext";
 import ThemeToggle from "../themeToggle/ThemeToggle";
@@ -85,6 +86,12 @@ const Sidebar = () => {
                         Produits
                       </li>
                     </Link>
+                    <Link href="/commandes" className="flex items-center">
+                      <ListAltIcon className="text-xl mr-2" />
+                      <li className="cursor-pointer flex items-center">
+                        Commandes
+                      </li>
+                    </Link>
                     <Link href="/articles" className="flex items-center">
                       <ArticleIcon className="text-xl mr-2 " />
                       <li className=" cursor-pointer flex items-center  ">
@@ -109,13 +116,13 @@ const Sidebar = () => {
                 alt="menu"
                 width={30}
                 height={30}
-                className={showLinks ? "" : "hidden  max-[600px]:block"}
+                className={showLinks ? "" : "hidden  max-[673px]:block"}
                 onClick={handleShowLinks}
                 style={{ filter: "invert(1)" }}
               />
             )}
           </div>
-          <div className="flex items-center p-3 gap-6 text-white max-[600px]:hidden">
+          <div className="flex items-center p-3 gap-6 text-white max-[673px]:hidden">
             <Link href="/" className="flex items-center cursor-pointer ">
               <HomeIcon className="text-xl mr-2" />
             </Link>
@@ -127,6 +134,12 @@ const Sidebar = () => {
             </Link>
             <Link href="/produits" className="flex items-center cursor-pointer">
               <StorefrontIcon className="text-xl mr-2" />
+            </Link>
+            <Link
+              href="/commandes"
+              className="flex items-center cursor-pointer"
+            >
+              <ListAltIcon className="text-xl mr-2" />
             </Link>
             <Link href="/articles" className="flex items-center cursor-pointer">
               <ArticleIcon className="text-xl mr-2" />
@@ -144,7 +157,7 @@ const Sidebar = () => {
       </div>
       {/* Menu 1 */}
       <div
-        className="flex-1 h-[calc(100vh-0px)] fixed top-50 z-50 max-[818px]:hidden"
+        className="flex-1 h-full overflow-scroll fixed top-50 z-50 max-[818px]:hidden"
         style={{ backgroundColor: "#0f172a" }}
       >
         <div className="p-10 text-slate-50 ">
@@ -181,6 +194,10 @@ const Sidebar = () => {
                 <StorefrontIcon className="text-xl mr-2" />
                 <li className="cursor-pointer flex items-center">Produits</li>
               </Link>
+              <Link href="/commandes" className="flex items-center">
+                <ListAltIcon className="text-xl mr-2" />
+                <li className="cursor-pointer flex items-center">Commandes</li>
+              </Link>
               <Link href="/articles" className="flex items-center">
                 <ArticleIcon className="text-xl mr-2" />
                 <li className=" cursor-pointer flex items-center ">Articles</li>
@@ -191,7 +208,7 @@ const Sidebar = () => {
               <ThemeToggle />
             </ul>
           </div>
-          <div className="text-sm mt-44">
+          <div className="text-sm mt-40">
             <span>
               © Copyright 2023. <br /> All Rights Reserved
             </span>
