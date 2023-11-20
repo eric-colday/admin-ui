@@ -32,11 +32,11 @@ const Sidebar = ({ data }) => {
         style={{ backgroundColor: "#0f172a" }}
       >
         <div className="h-full px-8 flex items-center justify-between ">
-          <Link href="/utilisateurs">
+          <Link href="/dashboard/utilisateurs">
             <div>
-              <h1 className="logo font-bold text-2xl text-blue-500 cursor-pointer">
+              <span className="logo font-bold text-2xl text-blue-500 cursor-pointer">
                 NecAdmin
-              </h1>
+              </span>
             </div>
           </Link>
           <div className="flex items-center p-3 gap-6">
@@ -60,7 +60,7 @@ const Sidebar = ({ data }) => {
                   "
                 />
                 <div className="flex flex-col p-3 gap-6">
-                  <Link href="/" className="cursor-pointer">
+                  <Link href="/dashboard" className="cursor-pointer">
                     <div className="flex items-center gap-5">
                       <img
                         src="/sidebar/veste-esprit-campus3.webp"
@@ -73,7 +73,7 @@ const Sidebar = ({ data }) => {
                     </div>
                   </Link>
                   <ul className="flex flex-col p-3 gap-6 text-white">
-                    <Link href="/" className="flex items-center">
+                    <Link href="/dashboard" className="flex items-center">
                       <HomeIcon className="text-xl mr-2" />
                       <li className="cursor-pointer flex items-center">
                         Tableau de bord
@@ -88,31 +88,31 @@ const Sidebar = ({ data }) => {
                         Boutique
                       </li>
                     </Link>
-                    <Link href="/utilisateurs" className="flex items-center">
+                    <Link href="/dashboard/utilisateurs" className="flex items-center">
                       <PermIdentityIcon className="text-xl mr-2" />
                       <li className="cursor-pointer flex items-center">
                         Utilisateurs
                       </li>
                     </Link>
-                    <Link href="/produits" className="flex items-center">
+                    <Link href="/dashboard/produits" className="flex items-center">
                       <Inventory2Icon className="text-xl mr-2" />
                       <li className="cursor-pointer flex items-center">
                         Produits
                       </li>
                     </Link>
-                    <Link href="/commandes" className="flex items-center">
+                    <Link href="/dashboard/commandes" className="flex items-center">
                       <ListAltIcon className="text-xl mr-2" />
                       <li className="cursor-pointer flex items-center">
                         Commandes
                       </li>
                     </Link>
-                    <Link href="/articles" className="flex items-center">
+                    <Link href="/dashboard/articles" className="flex items-center">
                       <ArticleIcon className="text-xl mr-2 " />
                       <li className=" cursor-pointer flex items-center  ">
                         Articles
                       </li>
                     </Link>
-                    <Link href="/categories" className="flex items-center">
+                    <Link href="/dashboard/categories" className="flex items-center">
                       <CategoryIcon className="text-xl mr-2 " />
                       <li className=" cursor-pointer flex items-center  ">
                         Categories
@@ -143,38 +143,38 @@ const Sidebar = ({ data }) => {
             )}
           </div>
           <div className="flex items-center p-3 gap-6 text-white max-[782px]:hidden">
-            <Link href="/" className="flex items-center cursor-pointer ">
+            <Link href="/dashboard" className="flex items-center cursor-pointer ">
               <HomeIcon className="text-xl mr-2" />
             </Link>
             <Link href="https://necstore.vercel.app/" className="flex items-center">
               <StorefrontIcon className="text-xl mr-2" />
             </Link>
             <Link
-              href="/utilisateurs"
+              href="/dashboard/utilisateurs"
               className="flex items-center cursor-pointer"
             >
               <PermIdentityIcon className="text-xl mr-2" />
             </Link>
-            <Link href="/produits" className="flex items-center cursor-pointer">
+            <Link href="/dashboard/produits" className="flex items-center cursor-pointer">
               <Inventory2Icon className="text-xl mr-2" />
             </Link>
             <Link
-              href="/commandes"
+              href="/dashboard/commandes"
               className="flex items-center cursor-pointer"
             >
               <ListAltIcon className="text-xl mr-2" />
             </Link>
-            <Link href="/articles" className="flex items-center cursor-pointer">
+            <Link href="/dashboard/articles" className="flex items-center cursor-pointer">
               <ArticleIcon className="text-xl mr-2" />
             </Link>
             <Link
-              href="/categories"
+              href="/dashboard/categories"
               className="flex items-center cursor-pointer"
             >
               <CategoryIcon className="text-xl mr-2" />
             </Link>
             <ThemeToggle />
-            <Link href="/utilisateurs" className="cursor-pointer ">
+            <Link href="//dashboard/utilisateurs" className="cursor-pointer ">
               <img
                 src="/sidebar/veste-esprit-campus3.webp"
                 className="w-12 h-12 object-cover rounded-full"
@@ -192,13 +192,13 @@ const Sidebar = ({ data }) => {
         style={{ backgroundColor: "#0f172a" }}
       >
         <div className="p-10 text-slate-50 ">
-          <Link href="/">
+          <Link href="/dashboard">
             <span className="font-bold text-2xl text-blue-500 cursor-pointer">
               NecAdmin
             </span>
           </Link>
           <div className="flex flex-col p-3 gap-6">
-            <Link href="/utilisateurs" className="cursor-pointer">
+            <Link href="/dashboard/utilisateurs" className="cursor-pointer">
               <div className="flex items-center gap-5">
                 <img
                   src="/sidebar/veste-esprit-campus3.webp"
@@ -211,7 +211,7 @@ const Sidebar = ({ data }) => {
               </div>
             </Link>
             <ul className="flex flex-col p-3 gap-6">
-              <Link href="/" className="flex items-center">
+              <Link href="/dashboard" className="flex items-center">
                 <HomeIcon className="text-xl mr-2" />
                 <li className="cursor-pointer flex items-center">
                   Tableau de bord
@@ -224,25 +224,25 @@ const Sidebar = ({ data }) => {
                 <StorefrontIcon className="text-xl mr-2" />
                 <li className="cursor-pointer flex items-center">Boutique</li>
               </Link>
-              <Link href="/utilisateurs" className="flex items-center">
+              <Link href="/dashboard/utilisateurs" className="flex items-center">
                 <PermIdentityIcon className="text-xl mr-2" />
                 <li className="cursor-pointer flex items-center  ">
                   Utilisateurs
                 </li>
               </Link>
-              <Link href="/produits" className="flex items-center">
+              <Link href="/dashboard/produits" className="flex items-center">
                 <Inventory2Icon className="text-xl mr-2" />
                 <li className="cursor-pointer flex items-center">Produits</li>
               </Link>
-              <Link href="/commandes" className="flex items-center">
+              <Link href="/dashboard/commandes" className="flex items-center">
                 <ListAltIcon className="text-xl mr-2" />
                 <li className="cursor-pointer flex items-center">Commandes</li>
               </Link>
-              <Link href="/articles" className="flex items-center">
+              <Link href="/dashboard/articles" className="flex items-center">
                 <ArticleIcon className="text-xl mr-2" />
                 <li className=" cursor-pointer flex items-center ">Articles</li>
               </Link>
-              <Link href="/categories" className="flex items-center">
+              <Link href="/dashboard/categories" className="flex items-center">
                 <CategoryIcon className="text-xl mr-2" />
                 <li className=" cursor-pointer flex items-center ">
                   Categories

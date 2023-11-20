@@ -4,7 +4,7 @@ import { Users } from "@/data";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Link from "next/link";
 import UserInfos from "@/components/utilisateurs/UserInfos";
-import Footer from "@/components/footer/Footer";
+import Footer from "@/components/dashboard/footer/Footer";
 
 const getData = (slug) => {
   const data = Users.find((user) => user.slug === slug);

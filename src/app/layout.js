@@ -1,4 +1,3 @@
-import Topbar from "@/components/topbar/Topbar";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { Inter } from "next/font/google";
