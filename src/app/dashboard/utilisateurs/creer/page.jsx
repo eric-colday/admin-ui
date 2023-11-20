@@ -1,7 +1,7 @@
-import Sidebar from "@/components/sidebar/Sidebar";
+import Sidebar from "@/components/dashboard/sidebar/Sidebar";
 import Link from "next/link";
 import React from "react";
-import Inputs from "@/components/utilisateurs/Inputs";
+import Inputs from "@/components/dashboard/utilisateurs/Inputs";
 
 export const metadata = {
   title: "Nouvel utilisateur - NecAdmin",

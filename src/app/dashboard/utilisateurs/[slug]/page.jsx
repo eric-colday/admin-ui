@@ -1,9 +1,9 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import { Users } from "@/data";
-import Sidebar from "@/components/sidebar/Sidebar";
+import Sidebar from "@/components/dashboard/sidebar/Sidebar";
 import Link from "next/link";
-import UserInfos from "@/components/utilisateurs/UserInfos";
+import UserInfos from "@/components/dashboard/utilisateurs/UserInfos";
 import Footer from "@/components/dashboard/footer/Footer";
 
 const getData = (slug) => {
