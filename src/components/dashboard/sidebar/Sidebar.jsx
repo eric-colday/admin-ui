@@ -34,9 +34,9 @@ const Sidebar = ({ data }) => {
         <div className="h-full px-8 flex items-center justify-between ">
           <Link href="/dashboard/utilisateurs">
             <div>
-              <span className="logo font-bold text-2xl text-blue-500 cursor-pointer">
+              <h1 className="logo font-bold text-2xl text-blue-500 cursor-pointer">
                 NecAdmin
-              </span>
+              </h1>
             </div>
           </Link>
           <div className="flex items-center p-3 gap-6">

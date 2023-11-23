@@ -11,81 +11,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { usersData } from "@/data";
 
-const data = [
-  {
-    name: "Jan",
-    utilisateurs: 4000,
-    commandes: 2400,
-    revenus: 2400,
-  },
-  {
-    name: "Fev",
-    utilisateurs: 3000,
-    commandes: 1398,
-    revenus: 2210,
-  },
-  {
-    name: "Mar",
-    utilisateurs: 2000,
-    commandes: 9800,
-    revenus: 2290,
-  },
-  {
-    name: "Avr",
-    utilisateurs: 2780,
-    commandes: 3908,
-    revenus: 2000,
-  },
-  {
-    name: "Mai",
-    utilisateurs: 1890,
-    commandes: 4800,
-    revenus: 2181,
-  },
-  {
-    name: "Jui",
-    utilisateurs: 2390,
-    commandes: 3800,
-    revenus: 2500,
-  },
-  {
-    name: "Juil",
-    utilisateurs: 3490,
-    commandes: 4300,
-    revenus: 2100,
-  },
-  {
-    name: "Août",
-    utilisateurs: 4000,
-    commandes: 2400,
-    revenus: 2400,
-  },
-  {
-    name: "Sep",
-    utilisateurs: 3000,
-    commandes: 1398,
-    revenus: 2210,
-  },
-  {
-    name: "Oct",
-    utilisateurs: 2000,
-    commandes: 9800,
-    revenus: 2290,
-  },
-  {
-    name: "Nov",
-    utilisateurs: 2780,
-    commandes: 3908,
-    revenus: 2000,
-  },
-  {
-    name: "Dec",
-    utilisateurs: 1890,
-    commandes: 4800,
-    revenus: 2181,
-  },
-];
 
 const Chart = () => {
   const { theme } = useContext(ThemeContext);
@@ -106,7 +33,7 @@ const Chart = () => {
         <AreaChart
           width={500}
           height={400}
-          data={data}
+          data={usersData}
           margin={{
             top: 10,
             right: 30,

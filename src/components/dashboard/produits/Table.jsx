@@ -62,7 +62,7 @@ const Table = ({ data, page }) => {
               )}
             </td>
             <td className="border-b pl-4">
-              <Link href={`/utilisateurs/${item.slug}`}>
+              <Link href={`/dashboard/produits/${item.slug}`}>
                 <EditIcon className="text-green-500 mr-10 cursor-pointer" />
               </Link>
               <DeleteOutlineIcon
