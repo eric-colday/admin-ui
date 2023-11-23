@@ -43,7 +43,7 @@ const WidgetLeft = () => {
               className="w-10 h-10 rounded-full object-cover"
             />
             <span className="max-[375px]:hidden">{user.name} </span>
-            <Link href={`/utilisateurs/${user.slug}`}>
+            <Link href={`/dashboard/utilisateurs/${user.slug}`}>
               <button className="flex justify-center items-center gap-2 bg-white rounded-2xl w-20 h-8 text-slate-900">
                 <VisibilityIcon className="widgetSmIcon" />
                 Voir

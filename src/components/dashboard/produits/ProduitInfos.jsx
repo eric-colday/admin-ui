@@ -11,10 +11,10 @@ const ProduitInfos = ({ data }) => {
   const [files, setFiles] = useState("");
 
   return (
-    <div className="flex gap-4 w-full max-[914px]:flex-col max-[818px]:flex-row max-[630px]:flex-col ">
+    <div className="flex gap-4 w-full max-[1200px]:flex-col max-[818px]:flex-row max-[630px]:flex-col ">
       {/* DIV 1 */}
       <div
-        className="mt-10 p-8 rounded-2xl w-2/3 max-[914px]:w-full max-[818px]:w-2/3 max-[630px]:w-full"
+        className="mt-10 p-8 rounded-2xl w-2/3 max-[1200px]:w-full max-[818px]:w-1/2 max-[630px]:w-full"
         style={
           theme === "dark"
             ? { backgroundColor: "#0f172a", color: "white" }
@@ -33,10 +33,28 @@ const ProduitInfos = ({ data }) => {
           <div className="flex flex-col gap-2">
             <span>id : {data.id}</span>
             <span>Nom : {data.title}</span>
-            <span>Ventes : 200</span>
             <span>
-              En stock : {data.stock === 0 ? "En rupture" : data.stock}
+              Description :{" "}
+              {data.description.length > 50
+                ? data.description.slice(0, 50) + "..."
+                : data.description}
             </span>
+            <span>Prix : {data.price} €</span>
+            <span>Categorie : {data.cat}</span>
+            <span>
+              Tailles :{" "}
+              {data.size.map((s) => (
+                <span>{s}, </span>
+              ))}
+            </span>
+            <span>
+              Couleurs :{" "}
+              {data.color.map((c) => (
+                <span>{c}, </span>
+              ))}
+            </span>
+            <span>Ventes : 200</span>
+            <span>Stock : {data.stock === 0 ? "En rupture" : data.stock}</span>
           </div>
         </div>
         <div className="mt-5 flex flex-col gap-3">
@@ -57,7 +75,7 @@ const ProduitInfos = ({ data }) => {
       >
         <h2 className="text-xl font-bold">Mise à jour</h2>
         <form action="">
-          <div className="flex justify-between gap-2 mt-5 max-[443px]:flex-col max-[443px]:gap-10 max-[443px]:items-center">
+          <div className="grid grid-cols-1 gap-2 mt-5 max-[443px]:flex-col max-[443px]:gap-10 max-[443px]:items-center">
             <div>
               <div>
                 <label htmlFor="" className="text-sm">
@@ -197,16 +215,14 @@ const ProduitInfos = ({ data }) => {
                   <option value="false">Non</option>
                 </select>
               </div>
-            </div>
-            <div className="flex flex-col gap-72 max-[443px]:gap-5">
-              <div className="flex items-center gap-5">
+              <div className="flex items-center gap-5 max-[504px]:flex-col mt-4">
                 <img
-                  src={data.image[0]}
+                  src={files ? URL.createObjectURL(files) : data.image[0]}
                   alt={data.title}
                   className="w-28 h-28 border rounded-xl object-cover"
                 />
                 <label htmlFor="file">
-                  <PublishIcon className="userUpdateIcon" />
+                  <PublishIcon />
                 </label>
                 <input
                   type="file"
@@ -214,14 +230,16 @@ const ProduitInfos = ({ data }) => {
                   name="file"
                   accept=".png,.jpeg,.jpg,.webp"
                   multiple
-                  style={{ display: "none" }}
-                  onChange={(e) => setFiles(e.target.files[0])}
                   required
+                  onChange={(e) => setFiles(e.target.files[0])}
+                  className="max-[504px]: max-[504px]:text-xs max-[504px]:w-full"
                 />
               </div>
-              <button className="w-32 bg-blue-950 text-white cursor-pointer p-2 rounded-2xl text-center">
-                Mettre à jour
-              </button>
+              <div className="max-[504px]:text-center">
+                <button className="w-32 mt-4 bg-blue-950 text-white cursor-pointer p-2 rounded-2xl text-center">
+                  Mettre à jour
+                </button>
+              </div>
             </div>
           </div>
         </form>

@@ -92,7 +92,7 @@ export const Products = [
       "/products/jeans/pantalon-en-denim2.webp",
       "/products/jeans/pantalon-en-denim3.webp",
     ],
-    slug: "pantalon-en-denim-wide-leg-Bleu",
+    slug: "pantalon-en-denim-wide-leg-Bleu", 
     catSlug: "jeans",
     cat: "jeans",
     size: ["S", "M", "L"],
@@ -523,6 +523,140 @@ export const productData = [
   {
     name: "Mar",
     Sales: 5000,
+  },
+];
+
+export const CategoriesPosts = [
+  {
+    id: 1,
+    slug: "jeans",
+    title: "Jeans",
+    img: "",
+    Posts: [
+      {
+        id: 1,
+        image: "/home/2.jpg",
+        title: "Jean Levis Comment choisir ?",
+        description:
+          "Le jean est un incontournable de la garde-robe masculine. Il est donc important de bien le choisir.",
+        slug: "jean-levis-comment-choisir",
+        catSlug: "jeans",
+        cat: '{"id":1,"slug":"jeans","title":"Jeans","img":"","Posts":[{"id":1,"image":"/home/2.jpg","title":"Jean Levis Comment choisir ?","description":"Le jean est un incontournable de la garde-robe masculine. Il est donc important de bien le choisir.","slug":"jean-levis-comment-choisir","catSlug":"jeans","cat":"jeans","active":true,"createdAt":"2021-05-01T00:00:00.000Z"}],"Products":[{"id":1,"title":"JEAN","description":"Jean skinny","price":"19.99","image":["/home/jean-flarebootcut.webp","/home/veste-matelassee.webp","/home/tennis-lacets.webp"],"slug":"jean-skinny","catSlug":"jeans","cat":"jeans","size":["S","M","L"],"color":["white","black","blue"],"inStock":true,"active":true,"createdAt":"2021-05-01T00:00:00.000Z"}],"active":true,"createdAt":"2021-05-01T00:00:00.000Z"}',
+        createdAt: "2021-05-01T00:00:00.000Z",
+      },
+    ],
+  },
+  {
+    id: 2,
+    slug: "t-shirts",
+    title: "T-shirts",
+    img: "",
+    Posts: [
+      {
+        id: 1,
+        image: "/home/1.jpg",
+        title: "Comment choisir son t-shirt ?",
+        description:
+          "Le t-shirt est un incontournable de la garde-robe masculine. Il est donc important de bien le choisir.",
+        slug: "comment-choisir-son-t-shirt",
+        catSlug: "t-shirts",
+        cat: '{"id":2,"slug":"t-shirts","title":"T-shirts","img":"","Posts":[{"id":2,"image":"/home/1.jpg","title":"Comment choisir son t-shirt ?","description":"Le t-shirt est un incontournable de la garde-robe masculine. Il est donc important de bien le choisir.","slug":"comment-choisir-son-t-shirt","catSlug":"t-shirts","cat":"{\\"id\\":2,\\"slug\\":\\"t-shirts\\",\\"title\\":\\"T-shirts\\",\\"img\\":\\"\\",\\"Posts\\":[{\\"id\\":2,\\"image\\":\\"/home/1.jpg\\",\\"title\\":\\"Comment choisir son t-shirt ?\\",\\"description\\":\\"Le t-shirt est un incontournable de la garde-robe masculine. Il est donc important de bien le choisir.\\",\\"slug\\":\\"comment-choisir-son-t-shirt\\",\\"catSlug\\":\\"t-shirts\\"}]}"}]}',
+        createdAt: "2021-05-01T00:00:00.000Z",
+      },
+    ],
+  },
+  {
+    id: 3,
+    slug: "vestes",
+    title: "Vestes",
+    img: "",
+    Posts: [
+      {
+        id: 1,
+        image: "/home/4.jpg",
+        title: "Comment choisir sa veste ?",
+        description:
+          "La veste est un incontournable de la garde-robe masculine. Il est donc important de bien la choisir.",
+        slug: "comment-choisir-sa-veste",
+        catSlug: "vestes",
+        cat: '{"id":3,"slug":"vestes","title":"Vestes","img":"","Posts":[{"id":3,"image":"/home/4.jpg","title":"Comment choisir sa veste ?","description":"La veste est un incontournable de la garde-robe masculine. Il est donc important de bien la choisir.","slug":"comment-choisir-sa-veste","catSlug":"vestes","cat":"{\\"id\\":3,\\"slug\\":\\"vestes\\",\\"title\\":\\"Vestes\\",\\"img\\":\\"\\",\\"Posts\\":[{\\"id\\":3,\\"image\\":\\"/home/4.jpg\\",\\"title\\":\\"Comment choisir sa veste ?\\",\\"description\\":\\"La veste est un incontournable de la garde-robe masculine. Il est donc important de bien la choisir.\\",\\"slug\\":\\"comment-choisir-sa-veste\\",\\"catSlug\\":\\"vestes\\"}]}"}]}',
+        createdAt: "2021-05-01T00:00:00.000Z",
+      },
+    ],
+  },
+  {
+    id: 4,
+    slug: "chaussures",
+    title: "Chaussures",
+    img: "",
+    Posts: [
+      {
+        id: 1,
+        image: "/home/3.jpg",
+        title: "Comment choisir ses chaussures ?",
+        description:
+          "Les chaussures sont un incontournable de la garde-robe masculine. Il est donc important de bien les choisir.",
+        slug: "comment-choisir-ses-chaussures",
+        catSlug: "chaussures",
+        cat: '{"id":4,"slug":"chaussures","title":"Chaussures","img":"","Posts":[{"id":4,"image":"/home/3.jpg","title":"Comment choisir ses chaussures ?","description":"Les chaussures sont un incontournable de la garde-robe masculine. Il est donc important de bien les choisir.","slug":"comment-choisir-ses-chaussures","catSlug":"chaussures","cat":"{\\"id\\":4,\\"slug\\":\\"chaussures\\",\\"title\\":\\"Chaussures\\",\\"img\\":\\"\\",\\"Posts\\":[{\\"id\\":4,\\"image\\":\\"/home/3.jpg\\",\\"title\\":\\"Comment choisir ses chaussures ?\\",\\"description\\":\\"Les chaussures sont un incontournable de la garde-robe masculine. Il est donc important de bien les choisir.\\",\\"slug\\":\\"comment-choisir-ses-chaussures\\",\\"catSlug\\":\\"chaussures\\"}]}"}]}',
+        createdAt: "2021-05-01T00:00:00.000Z",
+      },
+    ],
+  },
+];
+
+export const Posts = [
+  {
+    id: 1,
+    image: "/home/2.jpg",
+    title: "Jean Levis Comment choisir ?",
+    description:
+      "Le jean est un incontournable de la garde-robe masculine. Il est donc important de bien le choisir.",
+    content: "Choisir le jean parfait peut transformer votre garde-robe, et les Levi's sont des classiques intemporels. Mais avec tant de styles disponibles, comment trouver celui qui vous convient le mieux ? Voici un guide pour vous aider à naviguer dans l'univers des jeans Levi's. 1. Comprendre les différents modèles Levi's Les jeans Levi's sont célèbres pour leur gamme variée de coupes et de styles. Du classique 501 au moderne 711, chaque modèle a ses caractéristiques uniques. Voici un aperçu des modèles populaires :a. Levi's 501 Original Le modèle emblématique, le 501 Original, est connu pour sa coupe droite classique et sa toile denim robuste. Parfait pour un look décontracté et intemporel. b. Levi's 511 Slim Avec une coupe slim moderne, le Levi's 511 offre un équilibre parfait entre ajustement et confort. Idéal pour ceux qui préfèrent un style plus ajusté. c. Levi's 721 High Rise Skinny Pour une silhouette élégante et moderne, le Levi's 721 est un jean taille haute avec une coupe skinny flatteuse. Parfait pour mettre en valeur vos courbes. 2. Trouver la bonne taille et coupe Lorsque vous choisissez un jean Levi's, la taille et la coupe sont cruciales. Voici quelques conseils pour vous guider : a. Prenez vos mesures Mesurez votre tour de taille et votre longueur de jambe pour trouver la taille idéale. Les guides de tailles Levi's sont souvent disponibles en ligne pour vous aider. b. Essayez différents styles N'hésitez pas à essayer plusieurs modèles pour trouver celui qui vous va le mieux. Parfois, une coupe différente peut changer complètement l'ajustement. 3. Considérez le denim et les finitions Le denim Levi's varie en poids et en finition, ce qui peut influencer le confort et l'apparence du jean. Certains jeans sont pré-lavés pour un aspect vintage, tandis que d'autres ont un denim plus rigide qui se moule à votre corps avec le temps. En conclusion, choisir le bon jean Levi's demande un peu de recherche et d'essais, mais une fois que vous trouvez celui qui vous va comme un gant, il deviendra un incontournable de votre garde-robe. N'oubliez pas d'explorer les différentes coupes, tailles et finitions pour trouver votre jean parfait !",
+    slug: "jean-levis-comment-choisir",
+    catSlug: "jeans",
+    cat: 'jeans',
+    author: 'Eric Colday',
+    createdAt: "2021-05-01T00:00:00.000Z",
+  },
+  {
+    id: 2,
+    image: "/home/1.jpg",
+    title: "Comment choisir son t-shirt ?",
+    description:
+      "Le t-shirt est un incontournable de la garde-robe masculine. Il est donc important de bien le choisir.",
+    content: "",
+    slug: "comment-choisir-son-t-shirt",
+    catSlug: "t-shirts",
+    cat: 't-shirts',
+    author: 'Eric Colday',
+    createdAt: "2021-05-01T00:00:00.000Z",
+  },
+  {
+    id: 3,
+    image: "/home/4.jpg",
+    title: "Comment choisir sa veste ?",
+    description:
+      "La veste est un incontournable de la garde-robe masculine. Il est donc important de bien la choisir.",
+    content: "Choisir le jean parfait peut transformer votre garde-robe, et les Levi's sont des classiques intemporels. Mais avec tant de styles disponibles, comment trouver celui qui vous convient le mieux ? Voici un guide pour vous aider à naviguer dans l'univers des jeans Levi's. 1. Comprendre les différents modèles Levi's Les jeans Levi's sont célèbres pour leur gamme variée de coupes et de styles. Du classique 501 au moderne 711, chaque modèle a ses caractéristiques uniques. Voici un aperçu des modèles populaires :a. Levi's 501 Original Le modèle emblématique, le 501 Original, est connu pour sa coupe droite classique et sa toile denim robuste. Parfait pour un look décontracté et intemporel. b. Levi's 511 Slim Avec une coupe slim moderne, le Levi's 511 offre un équilibre parfait entre ajustement et confort. Idéal pour ceux qui préfèrent un style plus ajusté. c. Levi's 721 High Rise Skinny Pour une silhouette élégante et moderne, le Levi's 721 est un jean taille haute avec une coupe skinny flatteuse. Parfait pour mettre en valeur vos courbes. 2. Trouver la bonne taille et coupe Lorsque vous choisissez un jean Levi's, la taille et la coupe sont cruciales. Voici quelques conseils pour vous guider : a. Prenez vos mesures Mesurez votre tour de taille et votre longueur de jambe pour trouver la taille idéale. Les guides de tailles Levi's sont souvent disponibles en ligne pour vous aider. b. Essayez différents styles N'hésitez pas à essayer plusieurs modèles pour trouver celui qui vous va le mieux. Parfois, une coupe différente peut changer complètement l'ajustement. 3. Considérez le denim et les finitions Le denim Levi's varie en poids et en finition, ce qui peut influencer le confort et l'apparence du jean. Certains jeans sont pré-lavés pour un aspect vintage, tandis que d'autres ont un denim plus rigide qui se moule à votre corps avec le temps. En conclusion, choisir le bon jean Levi's demande un peu de recherche et d'essais, mais une fois que vous trouvez celui qui vous va comme un gant, il deviendra un incontournable de votre garde-robe. N'oubliez pas d'explorer les différentes coupes, tailles et finitions pour trouver votre jean parfait !",
+    slug: "comment-choisir-sa-veste",
+    catSlug: "vestes",
+    cat: 'vestes',
+    author: 'Eric Colday',
+    createdAt: "2021-05-01T00:00:00.000Z",
+  },
+  {
+    id: 4,
+    image: "/home/3.jpg",
+    title: "Comment choisir ses chaussures ?",
+    description:
+      "Les chaussures sont un incontournable de la garde-robe masculine. Il est donc important de bien les choisir.",
+   content: "Choisir le jean parfait peut transformer votre garde-robe, et les Levi's sont des classiques intemporels. Mais avec tant de styles disponibles, comment trouver celui qui vous convient le mieux ? Voici un guide pour vous aider à naviguer dans l'univers des jeans Levi's. 1. Comprendre les différents modèles Levi's Les jeans Levi's sont célèbres pour leur gamme variée de coupes et de styles. Du classique 501 au moderne 711, chaque modèle a ses caractéristiques uniques. Voici un aperçu des modèles populaires :a. Levi's 501 Original Le modèle emblématique, le 501 Original, est connu pour sa coupe droite classique et sa toile denim robuste. Parfait pour un look décontracté et intemporel. b. Levi's 511 Slim Avec une coupe slim moderne, le Levi's 511 offre un équilibre parfait entre ajustement et confort. Idéal pour ceux qui préfèrent un style plus ajusté. c. Levi's 721 High Rise Skinny Pour une silhouette élégante et moderne, le Levi's 721 est un jean taille haute avec une coupe skinny flatteuse. Parfait pour mettre en valeur vos courbes. 2. Trouver la bonne taille et coupe Lorsque vous choisissez un jean Levi's, la taille et la coupe sont cruciales. Voici quelques conseils pour vous guider : a. Prenez vos mesures Mesurez votre tour de taille et votre longueur de jambe pour trouver la taille idéale. Les guides de tailles Levi's sont souvent disponibles en ligne pour vous aider. b. Essayez différents styles N'hésitez pas à essayer plusieurs modèles pour trouver celui qui vous va le mieux. Parfois, une coupe différente peut changer complètement l'ajustement. 3. Considérez le denim et les finitions Le denim Levi's varie en poids et en finition, ce qui peut influencer le confort et l'apparence du jean. Certains jeans sont pré-lavés pour un aspect vintage, tandis que d'autres ont un denim plus rigide qui se moule à votre corps avec le temps. En conclusion, choisir le bon jean Levi's demande un peu de recherche et d'essais, mais une fois que vous trouvez celui qui vous va comme un gant, il deviendra un incontournable de votre garde-robe. N'oubliez pas d'explorer les différentes coupes, tailles et finitions pour trouver votre jean parfait !",
+    slug: "comment-choisir-ses-chaussures",
+    catSlug: "chaussures",
+    cat: 'chaussures',
+    author: 'Eric Colday',
+    createdAt: "2021-05-01T00:00:00.000Z",
   },
 ];
 
