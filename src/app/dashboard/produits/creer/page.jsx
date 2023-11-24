@@ -7,7 +7,7 @@ export const metadata = {
   description: "Pour créer un nouvel utilisateur du tableau de bord NecAdmin",
 };
 
-const NouvelProduit = () => {
+const NouveauProduit = () => {
   return (
     <div> 
       <div className="ml-72 pb-80 max-[818px]:ml-0 max-[818px]:mt-12 px-10 pt-20">
@@ -31,4 +31,4 @@ const NouvelProduit = () => {
   );
 };
 
-export default NouvelProduit;
+export default NouveauProduit;

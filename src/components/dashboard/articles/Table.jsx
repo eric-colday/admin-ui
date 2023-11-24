@@ -48,7 +48,7 @@ const Table = ({ data, page }) => {
               {format(post.createdAt, "fr_FR")}
             </td>
             <td className="border-b pl-4">
-              <Link href={`/dashboard/utilisateurs/${post.slug}`}>
+              <Link href={`/dashboard/update/${post.slug}`}>
                 <EditIcon className="text-green-500 mr-10 cursor-pointer" />
               </Link>
               <DeleteOutlineIcon
