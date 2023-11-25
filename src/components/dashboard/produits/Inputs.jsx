@@ -11,7 +11,7 @@ const Inputs = () => {
         <img
           src={file ? URL.createObjectURL(file) : "/products/product.svg"}
           alt="avatar"
-          className="w-40 h-40 border rounded-xl"
+          className="w-40 h-40 object-cover border rounded-xl"
         />
         <input
           type="file"

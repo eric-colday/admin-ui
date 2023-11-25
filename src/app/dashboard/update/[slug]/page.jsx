@@ -32,6 +32,14 @@ const Article = ({ params }) => {
     }
   };
 
+  const slugify = (str) =>
+  str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
   const handleDelete = async () => {
     try {
       window.location.replace("/blog");
@@ -51,7 +59,7 @@ const Article = ({ params }) => {
             {updateMode ? (
               <input
                 type="text"
-                value={title}
+                value={title || data.title}
                 className="w-full p-[50px] text-[28px] max-[]: border-none outline-none bg-transparent text-[var(--textColor)] "
                 autoFocus
                 onChange={(e) => setTitle(e.target.value)}
@@ -78,7 +86,7 @@ const Article = ({ params }) => {
             )}
             <div className="flex justify-between text-yellow-600 py-10 max-[375px]:flex-col max-[375px]:text-center ">
               <span className="">
-                Author:
+                Auteur:
                 <Link href="/#" className="link">
                   <b> Éric Colday</b>
                 </Link>
@@ -98,20 +106,25 @@ const Article = ({ params }) => {
                 theme="bubble"
                 modules={{
                   toolbar: [
-                    [{ header: [1, 2, 3, false] }],
-                    ["bold", "italic", "underline", "strike", "blockquote"],
-                    [
-                      { list: "ordered" },
-                      { list: "bullet" },
-                      { indent: "-1" },
-                      { indent: "+1" },
-                    ],
-                    ["color", "align"],
+                    ["bold", "italic", "underline", "strike"],
+                    ["blockquote", "code-block"],
+
+                    [{ header: 1 }, { header: 2 }],
+                    [{ list: "ordered" }, { list: "bullet" }],
+                    [{ script: "sub" }, { script: "super" }],
+                    [{ indent: "-1" }, { indent: "+1" }],
+                    [{ direction: "rtl" }],
+
+                    [{ size: ["small", false, "large", "huge"] }],
+                    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+                    [{ color: [] }, { background: [] }],
+                    [{ font: [] }],
+                    [{ align: [] }],
                     ["link", "image", "video"],
+
+                    ["clean"],
                   ],
-                  clipboard: {
-                    matchVisual: false,
-                  },
                 }}
                 formats={[
                   "header",
@@ -144,10 +157,10 @@ const Article = ({ params }) => {
               <p className="pb-10 ">{data.content} </p>
             )}
             <button
-              className="w-24 h-16 px-[10px] py-[20px] border-none bg-blue-950 text-white cursor-pointer rounded-[20px] "
+              className="w-40 h-16 px-[10px] py-[20px] border-none bg-blue-950 text-white cursor-pointer rounded-[20px] "
               onClick={handleUpdate}
             >
-              Update
+             Mettre à jour
             </button>
           </div>
         </div>

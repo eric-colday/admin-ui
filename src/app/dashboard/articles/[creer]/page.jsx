@@ -4,9 +4,21 @@ import React, { useState } from "react";
 import Image from "next/image";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
+import { CategoriesProducts } from "@/data";
 // import 'react-quill/dist/quill.snow.css';
 
+const getData = () => {
+  const data = CategoriesProducts;
+
+  if (data) {
+    return data;
+  }
+
+  return notFound();
+};
+
 const NouvelArticle = () => {
+  const data = getData();
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState(null);
   const [media, setMedia] = useState("");
@@ -72,14 +84,12 @@ const NouvelArticle = () => {
         <div className="flex justify-between pb-5 ">
           <select
             className="px-[10px] py-[20Px] outline-none border "
+            defaultValue={data.length > 0 ? data[0].slug : "Aucune catégorie"}
             onChange={(e) => setCatSlug(e.target.value)}
           >
-            <option value="style">style</option>
-            <option value="fashion">fashion</option>
-            <option value="food">food</option>
-            <option value="culture">culture</option>
-            <option value="travel">travel</option>
-            <option value="coding">coding</option>
+            {data.map((cat) => (
+              <option value={cat.slug}>{cat.title}</option>
+            ))}
           </select>
           <button
             className="w-24 h-16 px-[10px] py-[20px] border-none bg-blue-950 text-white cursor-pointer rounded-[20px] "
@@ -114,16 +124,24 @@ const NouvelArticle = () => {
             theme="bubble"
             modules={{
               toolbar: [
-                [{ header: [1, 2, 3, false] }],
-                ["bold", "italic", "underline", "strike", "blockquote"],
-                [
-                  { list: "ordered" },
-                  { list: "bullet" },
-                  { indent: "-1" },
-                  { indent: "+1" },
-                ],
-                ["color", "align"],
+                ["bold", "italic", "underline", "strike"],
+                ["blockquote", "code-block"],
+
+                [{ header: 1 }, { header: 2 }],
+                [{ list: "ordered" }, { list: "bullet" }],
+                [{ script: "sub" }, { script: "super" }],
+                [{ indent: "-1" }, { indent: "+1" }],
+                [{ direction: "rtl" }],
+
+                [{ size: ["small", false, "large", "huge"] }],
+                [{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+                [{ color: [] }, { background: [] }],
+                [{ font: [] }],
+                [{ align: [] }],
                 ["link", "image", "video"],
+
+                ["clean"],
               ],
               clipboard: {
                 matchVisual: false,

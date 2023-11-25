@@ -41,7 +41,10 @@ const WidgetRight = () => {
         </div>
         <div className="flex flex-col gap-10 ">
           {data.slice(Math.max(data.length - 4, 0)).map((item) => (
-            <Link href="/orders/[id]" as={`/orders/${item.id}`} key={item.id}>
+            <Link
+              // href="/orders/[id]" as={`/orders/${item.id}`} key={item.id}
+              href="/dashboard/commandes"
+            >
               <div
                 className="grid grid-cols-4 items-center gap-16 max-[973px]:gap-0 text-sm max-[540px]:grid-cols-3"
                 key={item.id}
@@ -58,7 +61,7 @@ const WidgetRight = () => {
                 </span>
                 <div
                   className={
-                    item.status === "en cours"
+                    item.status === "en attente"
                       ? "bg-red-400 rounded-2xl text-center"
                       : "bg-lime-500 rounded-2xl text-center"
                   }

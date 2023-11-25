@@ -125,15 +125,6 @@ const Sidebar = ({ data }) => {
                         Articles
                       </li>
                     </Link>
-                    <Link
-                      href="/dashboard/categories"
-                      className="flex items-center"
-                    >
-                      <CategoryIcon className="text-xl mr-2 " />
-                      <li className=" cursor-pointer flex items-center  ">
-                        Categories
-                      </li>
-                    </Link>
                     <Link href="/connexion">
                       <LogoutIcon className="text-3xl cursor-pointer mb-2" />
                     </Link>
@@ -194,12 +185,6 @@ const Sidebar = ({ data }) => {
               className="flex items-center cursor-pointer"
             >
               <ArticleIcon className="text-xl mr-2" />
-            </Link>
-            <Link
-              href="/dashboard/categories"
-              className="flex items-center cursor-pointer"
-            >
-              <CategoryIcon className="text-xl mr-2" />
             </Link>
             <ThemeToggle />
             <Link href="/dashboard/utilisateurs" className="cursor-pointer ">
@@ -272,12 +257,6 @@ const Sidebar = ({ data }) => {
               <Link href="/dashboard/articles" className="flex items-center">
                 <ArticleIcon className="text-xl mr-2" />
                 <li className=" cursor-pointer flex items-center ">Articles</li>
-              </Link>
-              <Link href="/dashboard/categories" className="flex items-center">
-                <CategoryIcon className="text-xl mr-2" />
-                <li className=" cursor-pointer flex items-center ">
-                  Categories
-                </li>
               </Link>
               <Link href="/connexion">
                 <LogoutIcon className="text-3xl text-white cursor-pointer mb-2" />
