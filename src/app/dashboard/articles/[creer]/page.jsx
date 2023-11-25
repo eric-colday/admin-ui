@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
+// import 'react-quill/dist/quill.snow.css';
 
 const NouvelArticle = () => {
   const [open, setOpen] = useState(false);
@@ -68,24 +69,26 @@ const NouvelArticle = () => {
           className="w-full p-[50px] text-[28px] max-[]: border-none outline-none bg-transparent text-[var(--textColor)] "
           onChange={(e) => setTitle(e.target.value)}
         />
-        <select
-          className="mb-12 mr-24 px-[10px] py-[20Px] ml-[50px] outline-none border "
-          onChange={(e) => setCatSlug(e.target.value)}
-        >
-          <option value="style">style</option>
-          <option value="fashion">fashion</option>
-          <option value="food">food</option>
-          <option value="culture">culture</option>
-          <option value="travel">travel</option>
-          <option value="coding">coding</option>
-        </select>
-        <button
-          className="w-24 h-16 px-[10px] py-[20px] border-none bg-blue-950 text-white cursor-pointer rounded-[20px] "
-          onClick={handleSubmit}
-        >
-          Publier
-        </button>
-        <div className="flex max-[768px]:flex-col gap-[50px] h-[700px] relative ">
+        <div className="flex justify-between pb-5 ">
+          <select
+            className="px-[10px] py-[20Px] outline-none border "
+            onChange={(e) => setCatSlug(e.target.value)}
+          >
+            <option value="style">style</option>
+            <option value="fashion">fashion</option>
+            <option value="food">food</option>
+            <option value="culture">culture</option>
+            <option value="travel">travel</option>
+            <option value="coding">coding</option>
+          </select>
+          <button
+            className="w-24 h-16 px-[10px] py-[20px] border-none bg-blue-950 text-white cursor-pointer rounded-[20px] "
+            onClick={handleSubmit}
+          >
+            Publier
+          </button>
+        </div>
+        <div className="flex max-[768px]:flex-col gap-[50px] h-[700px] relative z-[100] ">
           <button
             className="rounded-full h-10 w-10  bg-transparent border-[1px] border--[var(--textColor)] flex items-center justify-center cursor-pointer "
             onClick={() => setOpen(!open)}
@@ -109,11 +112,85 @@ const NouvelArticle = () => {
           )}
           <ReactQuill
             theme="bubble"
+            modules={{
+              toolbar: [
+                [{ header: [1, 2, 3, false] }],
+                ["bold", "italic", "underline", "strike", "blockquote"],
+                [
+                  { list: "ordered" },
+                  { list: "bullet" },
+                  { indent: "-1" },
+                  { indent: "+1" },
+                ],
+                ["color", "align"],
+                ["link", "image", "video"],
+              ],
+              clipboard: {
+                matchVisual: false,
+              },
+            }}
+            formats={[
+              "header",
+              "font",
+              "size",
+              "bold",
+              "italic",
+              "underline",
+              "strike",
+              "blockquote",
+              "list",
+              "bullet",
+              "indent",
+              "align",
+              "link",
+              "image",
+              "video",
+            ]}
+            value={value}
+            onChange={setValue}
+            placeholder="Redige ton article..."
+            className="w-full h-full bg-transparent  "
+          />
+          {/* <ReactQuill
+            theme="snow"
+            modules={{
+              toolbar: [
+                [{ header: [1, 2, 3, false] }],
+                ["bold", "italic", "underline", "strike", "blockquote"],
+                [
+                  { list: "ordered" },
+                  { list: "bullet" },
+                  { indent: "-1" },
+                  { indent: "+1" },
+                ],
+                ["link", "image", "video"],
+                ["clean"],
+              ],
+              clipboard: {
+                matchVisual: false,
+              },
+            }}
+            formats={[
+              "header",
+              "font",
+              "size",
+              "bold",
+              "italic",
+              "underline",
+              "strike",
+              "blockquote",
+              "list",
+              "bullet",
+              "indent",
+              "link",
+              "image",
+              "video",
+            ]}
             value={value}
             onChange={setValue}
             placeholder="Redige ton article..."
             className="w-full h-full bg-transparent "
-          />
+          /> */}
         </div>
       </div>
     </div>

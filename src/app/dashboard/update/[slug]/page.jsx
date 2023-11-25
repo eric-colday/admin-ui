@@ -5,6 +5,8 @@ import Link from "next/link";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Posts } from "@/data";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.bubble.css";
 
 const getData = (slug) => {
   const data = Posts.find((user) => user.slug === slug);
@@ -16,7 +18,7 @@ const getData = (slug) => {
   return notFound();
 };
 
-const Article = ({params}) => {
+const Article = ({ params }) => {
   const data = getData(params.slug);
   const [updateMode, setUpdateMode] = useState(false);
   const [title, setTitle] = useState("");
@@ -44,32 +46,29 @@ const Article = ({params}) => {
             <img
               src={data.image}
               alt={data.title}
-              className=""
+              className="w-full h-[200px] object-cover rounded-2xl"
             />
             {updateMode ? (
               <input
                 type="text"
                 value={title}
-                className=""
+                className="w-full p-[50px] text-[28px] max-[]: border-none outline-none bg-transparent text-[var(--textColor)] "
                 autoFocus
                 onChange={(e) => setTitle(e.target.value)}
               />
             ) : (
-              <div className="">
-                <h1 className="">
+              <div className="py-5 ">
+                <h1 className="text-[28px] font-bold flex justify-around items-center text-center max-[610px]:flex-col ">
                   {data.title}
                   {
-                    <div className="">
+                    <div className="flex gap-8 ">
                       <span
-                        className=""
+                        className="text-green-600 "
                         onClick={() => setUpdateMode(true)}
                       >
                         <EditIcon />
                       </span>
-                      <span
-                        className=""
-                        onClick={handleDelete}
-                      >
+                      <span className="text-red-600 " onClick={handleDelete}>
                         <DeleteIcon />
                       </span>
                     </div>
@@ -77,7 +76,7 @@ const Article = ({params}) => {
                 </h1>
               </div>
             )}
-            <div className="">
+            <div className="flex justify-between text-yellow-600 py-10 max-[375px]:flex-col max-[375px]:text-center ">
               <span className="">
                 Author:
                 <Link href="/#" className="link">
@@ -95,15 +94,59 @@ const Article = ({params}) => {
               </span>
             </div>
             {updateMode ? (
-              <textarea
-                className=""
-                value={desc}
-                onChange={(e) => setDesc(e.target.value)}
+              <ReactQuill
+                theme="bubble"
+                modules={{
+                  toolbar: [
+                    [{ header: [1, 2, 3, false] }],
+                    ["bold", "italic", "underline", "strike", "blockquote"],
+                    [
+                      { list: "ordered" },
+                      { list: "bullet" },
+                      { indent: "-1" },
+                      { indent: "+1" },
+                    ],
+                    ["color", "align"],
+                    ["link", "image", "video"],
+                  ],
+                  clipboard: {
+                    matchVisual: false,
+                  },
+                }}
+                formats={[
+                  "header",
+                  "font",
+                  "size",
+                  "bold",
+                  "italic",
+                  "underline",
+                  "strike",
+                  "blockquote",
+                  "list",
+                  "bullet",
+                  "indent",
+                  "align",
+                  "link",
+                  "image",
+                  "video",
+                ]}
+                value={desc || data.content}
+                onChange={
+                  (setDesc,
+                  (content, delta, source, editor) => {
+                    setDesc(editor.getHTML());
+                  })
+                }
+                placeholder={data.content}
+                className="w-full h-full bg-transparent relative z-[100] "
               />
             ) : (
-              <p className="">{data.content} </p>
+              <p className="pb-10 ">{data.content} </p>
             )}
-            <button className="" onClick={handleUpdate}>
+            <button
+              className="w-24 h-16 px-[10px] py-[20px] border-none bg-blue-950 text-white cursor-pointer rounded-[20px] "
+              onClick={handleUpdate}
+            >
               Update
             </button>
           </div>
